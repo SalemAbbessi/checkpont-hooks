@@ -6,9 +6,11 @@ function MovieList ({movies,title,rate}) {
   return (
     <div style={{display:"flex",justifyContent:"space-around",flexWrap:"wrap",margin:"auto",width:"90%"}}>
 
-        {movies.filter(film=>film.title.toLowerCase().includes(title.toLowerCase().trim()
-        &&film.rate<=rate))
-        .map((film)=><MovieCard  film={film}key={film} />)}
+        {movies.filter(film=>
+        film.title.toLowerCase().includes(title.toLowerCase())
+        
+        ).map(film=>(
+        <MovieCard  film={film}key={film} />))}
     </div>
   );
 }
